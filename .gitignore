@@ -1,0 +1,15 @@
+reveal.js/.idea/
+reveal.js/*.iml
+reveal.js/*.iws
+reveal.js/*.eml
+reveal.js/out/
+reveal.js/.DS_Store
+reveal.js/.svn
+reveal.js/log/*.log
+reveal.js/tmp/**
+reveal.js/node_modules/
+reveal.js/.sass-cache
+reveal.js/css/reveal.min.css
+reveal.js/js/reveal.min.js
+codeExamples/obj/*
+codeExamples/bin/*
