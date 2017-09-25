@@ -5,6 +5,8 @@
 ************/
 
 using System;
+using codeExamples.AnonymousTypes;
+
 namespace codeExamples
 {    
     class Program
@@ -12,6 +14,8 @@ namespace codeExamples
         static void Main(string[] args)
         {
             Console.WriteLine("Hello OKC#!");
+            new SimpleAnonTypes().Main();
+            Console.ReadKey();
         }
     }
 }

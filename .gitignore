@@ -13,3 +13,4 @@ reveal.js/css/reveal.min.css
 reveal.js/js/reveal.min.js
 codeExamples/obj/*
 codeExamples/bin/*
+codeExamples/.vs/codeExamples/v15/*
