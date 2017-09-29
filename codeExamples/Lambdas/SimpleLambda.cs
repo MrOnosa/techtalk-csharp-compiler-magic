@@ -5,19 +5,48 @@ using System.Text;
 
 namespace codeExamples.Lambdas
 {
-    public class SimpleLambda
+    public class LambdaExample1
     {
         public void Example()
         {
-            //TODO
-            //Action lamda = () => Console.WriteLine("Hello OKC#!");
-            var callLamda = new CallLamda();
-            callLamda.Call(() => Console.WriteLine("Hello OKC#!"));
-            string fromOutsideTheScopeOfTheLamda = "Hello from a different scope";
-            callLamda.Call(() => Console.WriteLine(fromOutsideTheScopeOfTheLamda));
-            //int[] a = {1};
-            //var c = 1;
-            //var b = a.Select(x => x == c);
+            new CallLamda().Call(() => Console.WriteLine("Jeff"));
+        }
+    }
+    public class LambdaExample2
+    {
+        public void Example()
+        {
+            int[] numbers = { 1, 2, 3 };
+            //var result = numbers.Aggregate(0, AddMethod);
+            var result = numbers.Aggregate(0, (left, right) => left + right);
+            Console.WriteLine($"Aggregation equals {result}");
+        }
+
+        private int AddMethod(int left, int right)
+        {
+            return left + right;
+        }
+    }
+
+    public class LambdaExample3
+    {
+        public void Example()
+        {
+            //The compiler generated class for the lambda has both example 1 and 2's code!
+            new CallLamda().Call(() => Console.WriteLine("Jeff"));
+
+            int[] numbers = { 1, 2, 3 };
+            var result = numbers.Aggregate(0, (left, right) => left + right);
+            Console.WriteLine($"Aggregation equals {result}");
+        }
+    }
+
+    public class LambdaExample4
+    {
+        public void Example()
+        {
+            int n = 42;
+            new CallLamda().Call(() => Console.WriteLine($"Calling a variable set from another scope: {n}"));
         }
     }
 

@@ -6,6 +6,7 @@
 
 using System;
 using codeExamples.AnonymousTypes;
+using codeExamples.Lambdas;
 
 namespace codeExamples
 {    
@@ -13,9 +14,15 @@ namespace codeExamples
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello OKC#!");
+            Console.WriteLine("Anonymous Type Examples");
             new AnonymousTypeExamples().Main();
             new AnonymousTypeExamples().UsingLegalAnonymousType();
+            Console.ReadKey();
+            Console.WriteLine();
+            Console.WriteLine("Lamda Expression Examples");
+            new LambdaExample1().Example();
+            new LambdaExample2().Example();
+            new LambdaExample4().Example();
             Console.ReadKey();
         }
     }
