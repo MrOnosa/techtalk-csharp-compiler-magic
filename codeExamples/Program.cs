@@ -14,7 +14,8 @@ namespace codeExamples
         static void Main(string[] args)
         {
             Console.WriteLine("Hello OKC#!");
-            new SimpleAnonTypes().Main();
+            new AnonymousTypeExamples().Main();
+            new AnonymousTypeExamples().UsingLegalAnonymousType();
             Console.ReadKey();
         }
     }

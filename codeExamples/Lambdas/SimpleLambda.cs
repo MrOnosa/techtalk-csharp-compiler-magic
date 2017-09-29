@@ -9,6 +9,7 @@ namespace codeExamples.Lambdas
     {
         public void Example()
         {
+            //TODO
             //Action lamda = () => Console.WriteLine("Hello OKC#!");
             var callLamda = new CallLamda();
             callLamda.Call(() => Console.WriteLine("Hello OKC#!"));
