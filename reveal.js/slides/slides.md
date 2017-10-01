@@ -53,16 +53,17 @@ var jeff = new <>f__AnonymousType0<int, string>(42, "Jeff");
 ```
 
 ```csharp
-internal sealed class <>f__AnonymousType0<<ID>j__TPar, <Name>j__TPar>
-{
-public <>f__AnonymousType0(<ID>j__TPar ID, <Name>j__TPar Name)
-  {
+internal sealed class <>f__AnonymousType0<<ID>j__TPar, 
+                                          <Name>j__TPar> {
+public <>f__AnonymousType0(<ID>j__TPar ID, <Name>j__TPar Name) {
     base..ctor();
     this.<ID>i__Field = ID;
     this.<Name>i__Field = Name;
   }
 }
 ```
+
+<small>Decompiled with [JetBrains decompiler](https://www.jetbrains.com/decompiler/)</small>
 
 Note: Invalid Class name in C# but not CLR. Not shown: Fields, Equals, GetHashCode, and ToString.
 
@@ -161,7 +162,8 @@ Note: Created static classes with fields. Same Func<,,> signature. Longer lifeti
 
 ---
 
-## Lambdas Expressions Cont.
+## Lambdas Expressions: Scopes
+
 ```csharp
 int n = 42;
 new CallLamda().Call(
@@ -172,6 +174,37 @@ new CallLamda().Call(
 public void Call(Action lamda) { lamda(); }
 ```
 
+Note: A class is generated to call the lambda, so how does this work?
+
+---
+
+```csharp
+LambdaExample4.<>c__DisplayClass0_0 cDisplayClass00 =
+              new LambdaExample4.<>c__DisplayClass0_0();
+cDisplayClass00.n = 42; //Fixes scoping issue!
+new CallLamda()
+    .Call(new Action((object) cDisplayClass00, 
+          __methodptr(<Example>b__0)));
+```
+
+```csharp
+private sealed class <>c__DisplayClass0_0 {
+  public int n; 
+  internal void <Example>b__0() {
+    Console.WriteLine(string.Format("Calling a variable set from"+
+                                    "another scope: {0}", 
+                                    (object) this.n));
+  }
+}
+```
+
+---
+
+* Generated code for Anonymous Types and Lambda Expressions are sophisticated
+ * Reuses code
+ * Combines classes for Lambdas 
+   * See LambdaExample3 on [GitHub](https://github.com/MrOnosa/techtalk-csharp-compiler-magic)
+ 
 ---
 
 # Thank you

@@ -12,16 +12,27 @@ namespace codeExamples
 {    
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("Anonymous Type Examples");
-            new AnonymousTypeExamples().Main();
+            Console.WriteLine("Example 1");
+            new AnonymousTypeExamples().Example1();
+            Console.WriteLine();
+            Console.WriteLine("Example 2");
+            new AnonymousTypeExamples().Example2();
+            Console.WriteLine();
+            Console.WriteLine("Example 3");
             new AnonymousTypeExamples().UsingLegalAnonymousType();
             Console.ReadKey();
             Console.WriteLine();
             Console.WriteLine("Lamda Expression Examples");
+            Console.WriteLine("Example 1");
             new LambdaExample1().Example();
+            Console.WriteLine();
+            Console.WriteLine("Example 2");
             new LambdaExample2().Example();
+            Console.WriteLine();
+            Console.WriteLine("Example 3");
             new LambdaExample4().Example();
             Console.ReadKey();
         }

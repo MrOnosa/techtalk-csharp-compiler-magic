@@ -34,7 +34,6 @@ namespace codeExamples.AnonymousTypes
         [DebuggerHidden]
         public f__AnonymousType0(ID_j_TPar ID, Name_j_TPar Name)
         {
-            //base..ctor();
             this.ID_i__Field = ID;
             this.Name_i__Field = Name;
         }
