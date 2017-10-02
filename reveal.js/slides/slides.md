@@ -236,7 +236,7 @@ Console.WriteLine(cDisplayClass00.n);
  * Combines classes for Lambdas 
    * See LambdaExample3 on [GitHub](https://github.com/MrOnosa/techtalk-csharp-compiler-magic) 
  * Handles scoping
- 
+
 ---
 
 # Thank you
