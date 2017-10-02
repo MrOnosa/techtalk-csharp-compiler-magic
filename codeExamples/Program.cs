@@ -23,7 +23,7 @@ namespace codeExamples
             Console.WriteLine();
             Console.WriteLine("Example 3");
             new AnonymousTypeExamples().UsingLegalAnonymousType();
-            Console.ReadKey();
+            Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Lamda Expression Examples");
             Console.WriteLine("Example 1");
@@ -33,8 +33,13 @@ namespace codeExamples
             new LambdaExample2().Example();
             Console.WriteLine();
             Console.WriteLine("Example 3");
+            new LambdaExample3().Example();
+            Console.WriteLine();
+            Console.WriteLine("Example 4");
             new LambdaExample4().Example();
-            Console.ReadKey();
+            Console.WriteLine();
+            Console.WriteLine("Example 5");
+            new LambdaExample5().Example();
         }
     }
 }

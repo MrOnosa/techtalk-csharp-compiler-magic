@@ -12,10 +12,6 @@ Note: Press `s`. `esc` to see map. Arrow keys to use slides. Get a PowerShell te
 ## Lambdas Expressions
 ## In C\# #
 
-<!-- vvv
-
-Test -->
-
 ---
 
 # Anonymous Types
@@ -42,6 +38,7 @@ string Name = "Jeff";
 var jeff = new { ID, Name };
 new {ID = 42, Name = "Jeff"}.Equals(jeff);//TRUE
 new {Name = "Jeff", ID = 42}.Equals(jeff);//FALSE
+Console.WriteLine(jeff);//{ ID = 42, Name = Jeff }
 ```
 
 Note: Inferred names. Only 2 classes generated, not 3. Equals, GetHashCode, and ToString generated. Order and property names matters.
@@ -66,6 +63,14 @@ public <>f__AnonymousType0(<ID>j__TPar ID, <Name>j__TPar Name) {
 <small>Decompiled with [JetBrains decompiler](https://www.jetbrains.com/decompiler/)</small>
 
 Note: Invalid Class name in C# but not CLR. Not shown: Fields, Equals, GetHashCode, and ToString.
+
+---
+
+* Generated code for Anonymous Types is sophisticated
+ * Reuses code
+ * Equals
+ * ToString
+ * Invalid names prevents naming conflicts
 
 ---
 
@@ -191,19 +196,46 @@ new CallLamda()
 private sealed class <>c__DisplayClass0_0 {
   public int n; 
   internal void <Example>b__0() {
-    Console.WriteLine(string.Format("Calling a variable set from"+
-                                    "another scope: {0}", 
-                                    (object) this.n));
+    Console.WriteLine(this.n);
   }
 }
 ```
 
 ---
 
-* Generated code for Anonymous Types and Lambda Expressions are sophisticated
+## Lambdas Expressions:
+## Scopes Cont.
+
+```csharp
+int n = 42;
+new CallAction().Call(() => n=5);
+Console.WriteLine(n); //5
+```
+```csharp
+public void Call(Action lamda) { lamda(); }
+```
+
+Note: Why was 5 written instead of 42?
+
+---
+
+```csharp
+LambdaExample5.<>c__DisplayClass0_0 cDisplayClass00 = 
+              new LambdaExample5.<>c__DisplayClass0_0();
+cDisplayClass00.n = 42;
+new CallAction().Call(new Action((object) cDisplayClass00, 
+                      __methodptr(<Example>b__0)));
+//Not n, but cDisplayClass00.n
+Console.WriteLine(cDisplayClass00.n);
+```
+
+---
+
+* Generated code for Lambda Expressions are sophisticated
  * Reuses code
  * Combines classes for Lambdas 
-   * See LambdaExample3 on [GitHub](https://github.com/MrOnosa/techtalk-csharp-compiler-magic)
+   * See LambdaExample3 on [GitHub](https://github.com/MrOnosa/techtalk-csharp-compiler-magic) 
+ * Handles scoping
  
 ---
 

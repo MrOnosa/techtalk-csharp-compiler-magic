@@ -7,8 +7,8 @@ namespace codeExamples.AnonymousTypes
     {
         public void Example1()
         {
-            var myAnonymousObject = new { ID = 42, Name = "Jeff" }; //<>f__AnonymousType0`2
-            Console.WriteLine(myAnonymousObject);
+            var jeff = new { ID = 42, Name = "Jeff" }; //<>f__AnonymousType0`2
+            Console.WriteLine(jeff);
         }
 
         /*
