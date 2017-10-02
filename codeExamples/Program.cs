@@ -19,7 +19,9 @@ namespace codeExamples
             new AnonymousTypeExamples().Example1();
             Console.WriteLine();
             Console.WriteLine("Example 2");
-            new AnonymousTypeExamples().Example2();
+            dynamic dynamic = new AnonymousTypeExamples().Example2();
+            Console.WriteLine(dynamic.ID);
+            Console.WriteLine(dynamic.Name);
             Console.WriteLine();
             Console.WriteLine("Example 3");
             new AnonymousTypeExamples().UsingLegalAnonymousType();

@@ -25,7 +25,7 @@ namespace codeExamples.AnonymousTypes
         }
         */
 
-        public void Example2()
+        public dynamic Example2()
         {
             int ID = 42;
             string Name = "Jeff";
@@ -33,8 +33,11 @@ namespace codeExamples.AnonymousTypes
             Console.WriteLine(myAnonymousObject2);
             Console.WriteLine(new { ID = 42, Name = "Jeff" }.Equals(myAnonymousObject2));
             Console.WriteLine(new { Name = "Jeff", ID = 42 }.Equals(myAnonymousObject2));
-        }
+            dynamic d = myAnonymousObject2;
 
+            return d;
+        }
+        
         /*
         // Decompiled with JetBrains decompiler
         // Type: codeExamples.AnonymousTypes.AnonymousTypeExamples

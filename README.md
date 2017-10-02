@@ -3,7 +3,9 @@ Presentation originally for the OKC# user group.
 
 [Slides](https://cdn.rawgit.com/MrOnosa/techtalk-csharp-compiler-magic/master/reveal.js/index.html#/)
 
-<!-- [Recording](https://www.twitch.tv/videos/133190313) (Starts 4 minutes in) -->
+[Recording](https://www.twitch.tv/videos/179174859?t=26m25s) (Starts 26 minutes in)
+
+Note: I answered a question incorrectly. You can set a dynamic variable to an anonymous value, then use it outside of your class. I updated `codeExamples.AnonymousTypes.AnonymousTypeExamples.Example2()` to reflect this.
 
 ## To the cloners
 
