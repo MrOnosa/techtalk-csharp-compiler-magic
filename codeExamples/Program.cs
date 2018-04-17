@@ -6,6 +6,7 @@
 
 using System;
 using codeExamples.AnonymousTypes;
+using codeExamples.Async;
 using codeExamples.Lambdas;
 
 namespace codeExamples
@@ -42,6 +43,12 @@ namespace codeExamples
             Console.WriteLine();
             Console.WriteLine("Example 5");
             new LambdaExample5().Example();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Async Examples");
+            Console.WriteLine("Example 1");
+            new AsyncExample1().ExampleAsync().Wait();
+            new AsyncExample1().Example();
         }
     }
 }
