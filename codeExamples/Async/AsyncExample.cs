@@ -41,12 +41,12 @@ namespace codeExamples.Async
   {
     public Task ExampleAsync()
     {
-      AsyncExample1.\u003CExampleAsync\u003Ed__0 stateMachine = new AsyncExample1.\u003CExampleAsync\u003Ed__0();
-      stateMachine.\u003C\u003E4__this = this;
-      stateMachine.\u003C\u003Et__builder = AsyncTaskMethodBuilder.Create();
-      stateMachine.\u003C\u003E1__state = -1;
-      stateMachine.\u003C\u003Et__builder.Start<AsyncExample1.\u003CExampleAsync\u003Ed__0>(ref stateMachine);
-      return stateMachine.\u003C\u003Et__builder.Task;
+      AsyncExample1.<ExampleAsync>d__0 stateMachine = new AsyncExample1.<ExampleAsync>d__0();
+      stateMachine.<>4__this = this;
+      stateMachine.<>t__builder = AsyncTaskMethodBuilder.Create();
+      stateMachine.<>1__state = -1;
+      stateMachine.<>t__builder.Start<AsyncExample1.<ExampleAsync>d__0>(ref stateMachine);
+      return stateMachine.<>t__builder.Task;
     }
 
     public void Example()
@@ -58,64 +58,64 @@ namespace codeExamples.Async
 
     public AsyncExample1()
     {
-      base.\u002Ector();
+      base..ctor();
     }
 
     [CompilerGenerated]
-    private sealed class \u003CExampleAsync\u003Ed__0 : IAsyncStateMachine
+    private sealed class <ExampleAsync>d__0 : IAsyncStateMachine
     {
-      public int \u003C\u003E1__state;
-      public AsyncTaskMethodBuilder \u003C\u003Et__builder;
-      public AsyncExample1 \u003C\u003E4__this;
-      private int \u003Ci\u003E5__1;
-      private int \u003Cj\u003E5__2;
-      private int \u003C\u003Es__3;
-      private TaskAwaiter<int> \u003C\u003Eu__1;
+      public int <>1__state;
+      public AsyncTaskMethodBuilder <>t__builder;
+      public AsyncExample1 <>4__this;
+      private int <i>5__1;
+      private int <j>5__2;
+      private int <>s__3;
+      private TaskAwaiter<int> <>u__1;
 
-      public \u003CExampleAsync\u003Ed__0()
+      public <ExampleAsync>d__0()
       {
-        base.\u002Ector();
+        base..ctor();
       }
 
       void IAsyncStateMachine.MoveNext()
       {
-        int num1 = this.\u003C\u003E1__state;
+        int num1 = this.<>1__state;
         try
         {
           TaskAwaiter<int> awaiter;
           int num2;
           if (num1 != 0)
           {
-            this.\u003Ci\u003E5__1 = 1;
-            awaiter = Task.FromResult<int>(this.\u003Ci\u003E5__1).GetAwaiter();
+            this.<i>5__1 = 1;
+            awaiter = Task.FromResult<int>(this.<i>5__1).GetAwaiter();
             if (!awaiter.IsCompleted)
             {
-              this.\u003C\u003E1__state = num2 = 0;
-              this.\u003C\u003Eu__1 = awaiter;
-              AsyncExample1.\u003CExampleAsync\u003Ed__0 stateMachine = this;
-              this.\u003C\u003Et__builder.AwaitUnsafeOnCompleted<TaskAwaiter<int>, AsyncExample1.\u003CExampleAsync\u003Ed__0>(ref awaiter, ref stateMachine);
+              this.<>1__state = num2 = 0;
+              this.<>u__1 = awaiter;
+              AsyncExample1.<ExampleAsync>d__0 stateMachine = this;
+              this.<>t__builder.AwaitUnsafeOnCompleted<TaskAwaiter<int>, AsyncExample1.<ExampleAsync>d__0>(ref awaiter, ref stateMachine);
               return;
             }
           }
           else
           {
-            awaiter = this.\u003C\u003Eu__1;
-            this.\u003C\u003Eu__1 = new TaskAwaiter<int>();
-            this.\u003C\u003E1__state = num2 = -1;
+            awaiter = this.<>u__1;
+            this.<>u__1 = new TaskAwaiter<int>();
+            this.<>1__state = num2 = -1;
           }
-          this.\u003C\u003Es__3 = awaiter.GetResult();
-          this.\u003Cj\u003E5__2 = this.\u003C\u003Es__3;
-          ++this.\u003Ci\u003E5__1;
-          Console.WriteLine(string.Format("I: {0} | J: {1}", (object) this.\u003Ci\u003E5__1, (object) this.\u003Cj\u003E5__2));
+          this.<>s__3 = awaiter.GetResult();
+          this.<j>5__2 = this.<>s__3;
+          ++this.<i>5__1;
+          Console.WriteLine(string.Format("I: {0} | J: {1}", (object) this.<i>5__1, (object) this.<j>5__2));
         }
         catch (Exception ex)
         {
-          this.\u003C\u003E1__state = -2;
-          this.\u003C\u003Et__builder.SetException(ex);
+          this.<>1__state = -2;
+          this.<>t__builder.SetException(ex);
           return;
         }
-        this.\u003C\u003E1__state = -2;
-        this.\u003C\u003Et__builder.SetResult();
+        this.<>1__state = -2;
+        this.<>t__builder.SetResult();
       }
 
       [DebuggerHidden]
