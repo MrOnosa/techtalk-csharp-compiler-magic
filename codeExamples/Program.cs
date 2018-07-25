@@ -8,6 +8,7 @@ using System;
 using codeExamples.AnonymousTypes;
 using codeExamples.Async;
 using codeExamples.Lambdas;
+using codeExamples.Sugar;
 
 namespace codeExamples
 {    
@@ -49,6 +50,9 @@ namespace codeExamples
             Console.WriteLine("Example 1");
             new AsyncExample1().ExampleAsync().Wait();
             new AsyncExample1().Example();
+            Console.WriteLine("Misc Examples");
+            Console.WriteLine("Example 1");
+            new Setter().Example();
         }
     }
 }
