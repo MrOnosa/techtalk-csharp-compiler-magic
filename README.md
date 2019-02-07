@@ -1,7 +1,7 @@
 # Compiler Magic
 Presentation originally for the OKC# user group.
 
-[Slides](https://cdn.rawgit.com/MrOnosa/techtalk-csharp-compiler-magic/master/reveal.js/index.html#/)
+[Slides](https://mronosa.github.io/techtalk-csharp-compiler-magic/reveal.js/index.html)
 
 [Recording](https://www.twitch.tv/videos/179174859?t=26m25s) (Starts 26 minutes in)
 
